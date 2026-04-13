@@ -29,6 +29,7 @@ h1 {
 }
 p {
 	text-align: center;
+	tr:first-child
 }
 p[align="left"] b {
     color: black;

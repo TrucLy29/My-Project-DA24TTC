@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="../css/style2.css">
+</head>
+<body>
+    <div class="container">
+        <form id="frmRegister">
+            <h3 class="title">Hồ sơ đăng ký Câu Lạc Bộ</h3>
+
+            <div class="form-group">
+                <label class="label">Họ và tên:</label>
+                <input class="form-control" type="text" name="fullname">
+            </div>
+            <div class="form-group">
+                 <label class="label">MSSV:</label>
+                <input class="form-control" type="text" name="mssv">
+            </div>
+            <div class="form-group">
+                 <label class="label">Mã lớp:</label>
+                 <select class="form-control" name="malop">
+                 <option value="">-- Chọn mã lớp --</option>
+                 <option value="da24ttc">DA24TTA</option>
+                 <option value="da24tta">DA24TTB</option>
+                 <option value="da24ttb">DA24TTC</option>
+                 <option value="da24ttd">DA24TTD</option>
+            </select>
+            </div>
+
+            <div class="form-group">
+                <label class="label">Ngày sinh:</label>
+                <input class="form-control" type="date" name="birthday">
+            </div>
+
+            <div class="form-group">
+                <label class="label">Giới tính:</label><br>
+                <input type="radio" name="gender" value="nam"> Nam
+                <input type="radio" name="gender" value="nu"> Nữ
+            </div>
+
+            <div class="form-group">
+                <label class="label">Địa chỉ:</label>
+                <input class="form-control" type="text" name="address">
+            </div>
+
+            <div class="form-group">
+                <label class="label">Số điện thoại:</label>
+                <input class="form-control" type="tel" name="phone">
+            </div>
+
+            <div class="form-group">
+                <label class="label">Email:</label>
+                <input class="form-control" type="email" name="email">
+            </div>
+
+            <div class="form-group">
+                <label class="label">Câu lạc bộ:</label>
+                <input type="checkbox" name="club" value="bongda"> Bóng đá
+                <input type="checkbox" name="club" value="caulong"> Cầu lông
+                <input type="checkbox" name="club" value="covua"> Cờ vua
+                <input type="checkbox" name="club" value="muahat"> Múa hát
+                <input type="checkbox" name="club" value="hoihoa"> Hội hoạ
+                
+                <input type="checkbox" name="club" value="khac"> Khác: 
+                 <input type="text" class="form-control" name="club_khac" placeholder="Nhập CLB khác">
+            </div>
+
+            <input class="button" type="submit" value="Đăng ký">
+            <input class="button" type="reset" value="Nhập lại">
+        </form>
+    </div>
+</body>
+</html>
