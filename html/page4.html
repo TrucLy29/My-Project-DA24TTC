@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="../css/style4.css">
+</head>
+<body>
+    <div class="container">
+        <table border="1">
+            <caption> Hóa đơn mua hàng</caption>
+            <tr>
+                <th>Tên sản phẩm</th>
+                <th>Số lượng</th>
+                <Th>Đơn giá</Th>
+                <th>Thành tiền</th>
+            </tr>
+            <tr>
+                <td>Niềm vui </td>
+                <td class="sl">100</td>
+                <td class="dg">1000</td>
+                <td class="tt"></td>
+            </tr>
+             <tr>
+                <td>Động lực học tập</td>
+                <td class="sl">1000</td>
+                <td class="dg">0</td>
+                <td class="tt"></td>
+            </tr>
+             <tr>
+                <td>Giấc ngủ ngon</td>
+                <td class="sl">1</td>
+                <td class="dg">1000</td>
+                <td class="tt"></td>
+            </tr>
+             <tr>
+                <td>Sự kiên trì</td>
+                <td class="sl">999</td>
+                <td class="dg">4000</td>
+                <td class="tt"></td>
+            </tr>
+             <tr>
+                <td>Sự xinh đẹp</td>
+                <td class="sl">1</td>
+                <td class="dg">10000</td>
+                <td class="tt"></td>
+            </tr>
+            <tr>
+                <td colspan="3">Tổng thanh toán</td>
+                <td id="kq"></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+    const soLuong = document.getElementsByClassName("sl");
+    const donGia = document.getElementsByClassName("dg");
+    const thanhTien = document.getElementsByClassName("tt");
+    let tongThanhtoan = 0;
+
+    for (let i = 0; i < soLuong.length; i++) {
+        thanhTien[i].innerHTML = soLuong[i].innerHTML * donGia[i].innerHTML;
+        tongThanhtoan +=parseInt(thanhTien[i].innerHTML);
+    }
+    document.getElementById("kq").innerHTML = tongThanhtoan;
+</script>
+</body>
+</html>
