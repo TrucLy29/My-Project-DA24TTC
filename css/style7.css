@@ -1,0 +1,73 @@
+/* 1. Thiết lập chung cho toàn bộ trang */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    margin: 0;
+}
+
+/* 2. Container chứa danh sách sản phẩm */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* 3. Khung chứa 1 sản phẩm (product-item) */
+.product-item {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #eee;
+}
+
+/* Hiệu ứng khi di chuột vào sản phẩm */
+.product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* 4. Phần hình ảnh */
+.product-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Giúp ảnh không bị méo khi thay đổi kích thước */
+    display: block;
+}
+
+/* 5. Phần thông tin sản phẩm */
+.product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Tên sản phẩm */
+.product-info p:first-child {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+/* Giá sản phẩm */
+.product-info p:last-child {
+    font-size: 1.1rem;
+    color: #e74c3c; /* Màu đỏ nổi bật cho giá */
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Bonus: Thêm một chút màu sắc cho đơn vị "tỉ" */
+.product-info p:last-child::after {
+    content: " VNĐ";
+    font-size: 0.8rem;
+    color: #888;
+}
