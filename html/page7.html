@@ -1,74 +1,33 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-    <title>Thiết kế form</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/style7.css">
+    <title>Bộ Sưu Tập Son Môi</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="product-list" id="product-list">
+
+    <div class="container mt-4">
+
+        <!-- Tiêu đề -->
+        <h1 class="text-center text-danger mb-4">Bộ Sưu Tập Son Môi </h1>
+
+        <!-- Danh sách sản phẩm -->
+        <div class="product-list row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4"
+            id="product-list">
         </div>
+
     </div>
 
-    <script>
-        //Tạo thẻ div khung chứa 1 sản phẩm - product item
-        const productItem = document.createElement("div");
-
-        //Thêm thuộc tính cho thẻ div
-        productItem.setAttribute("class", "product-item");
-
-        //Tạo khung số 1 - chứa ảnh - product image
-        const productImage = document.createElement("div");
-
-        //Thêm thuộc tính cho thẻ div
-        productImage.setAttribute("class", "product-image");
-
-        //Thêm ảnh vào khung chứa
-        const myImage = document.createElement("img");
-        myImage.setAttribute("src", "../assets/images/avatarly.jpg");
-        myImage.setAttribute("alt", "Ảnh đại diện");
-
-        //Gắn hình vào khung chứa product image
-        productImage.appendChild(myImage);
-
-        //Tạo khung số 2 - chứa thông tin sản phẩm - product info
-        const productInfo = document.createElement("div");
-
-        //Thêm thuộc tính cho thẻ div
-        productInfo.setAttribute("class", "product-info");
-
-        //Thêm đối tượng p - chứa tên sản phẩm
-        const productName = document.createElement("p");
-        const productNameText = document.createTextNode("Vễ thương hem");
-        productName.appendChild(productNameText);
-
-        //Gắn vào khung chứa
-        productInfo.appendChild(productName);
-
-        //Thêm đối tượng p - chứa giá
-        const productPrice = document.createElement("p");
-        const productPriceText = document.createTextNode("Vô giá");
-        productPrice.appendChild(productPriceText);
-
-        //Gắn vào khung chứa
-        productInfo.appendChild(productPrice);
-
-        const productLink = document. createElement ("a");
-        const productLinkText = document.createTextNode("Xem chi tiết");
-        productLink.setAttribute("href", "product-detail.html");
-        productLink.appendChild(productLinkText);
-       //Gắn link cho product Info 
-        productInfo.appendChild(productLink)
-
-        //Gắn 2 khung image và info vào product item
-        productItem.appendChild(productImage);
-        productItem.appendChild(productInfo);
-
-        //Gắn product item vào product list
-        document.getElementById("product-list").appendChild(productItem);
-    </script>
+    <script src="../js/lib7.js"></script>
 
 </body>
+
 </html>
